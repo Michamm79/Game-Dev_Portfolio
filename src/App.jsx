@@ -586,7 +586,7 @@ public class NavPathVisualizerEditor : Editor
       title: 'Project Maelstrom - Solo Dev Game Demo',
       category: 'Action-Adventure RPG',
       thumbnail:
-        'https://i.ibb.co/GfHBfRbR/Project-Maelstrom-Environment-Character.jpg',
+        'https://i.ibb.co/JWhS0Q81/Project-Maelstrom-Environment-Character.jpg',
       video: 'your-video-url.mp4',
       description:
         'Inclusive Action-RPG where players unknowingly exist in a hyper-realistic virtual experiment.Multiplayer coming.',
@@ -597,7 +597,7 @@ public class NavPathVisualizerEditor : Editor
       title: 'B52 Training Suite (Military Contract)',
       category: 'VR/Military - AAA-Scale Production',
       thumbnail:
-        'https://i.ibb.co/YTcXX1GK/B52-Training-Immersive-Environment.jpg',
+        'https://i.ibb.co/cKCsGgzk/B52-Training-Immersive-Environment.jpg',
       video: 'YOUR-YOUTUBE-LINK-HERE', // Add your YouTube link!
       description:
         'Multi-million dollar fully immersive military B52 training system for the United States Air Force. Multiple trainees linked using Normcore (migrated to Photon) enabling simultaneous role-based training. Allows multiple personnel to perform different aircraft operation jobs in real-time collaborative scenarios, preparing crews for actual mission conditions. Results compared against traditional training methods showed significant improvement in readiness and retention.',
@@ -616,7 +616,7 @@ public class NavPathVisualizerEditor : Editor
       id: 3,
       title: 'Sensorama R&D Project',
       category: 'VR/AR & Robotics',
-      thumbnail: 'https://i.ibb.co/27TTQKz8/Sensorama-External.png',
+      thumbnail: 'https://i.ibb.co/hvChHNC/Sensorama-External.png',
       description:
         'Holographic content placement system using OVR and Photon networking',
       tags: ['Unity', 'MR', 'Spatial Computing'],
