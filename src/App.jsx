@@ -1502,7 +1502,7 @@ public class NavPathVisualizerEditor : Editor
       <section id="hero" className="hero" ref={heroRef}>
         <div className="hero-content">
           <h1 className="hero-title">Michael Hammond Portfolio</h1>
-          <p className="hero-subtitle">VR/AR Game Developer</p>
+          <p className="hero-subtitle">Senior Game Developer</p>
           <p className="nav-hint">↓ Scroll to explore ↓</p>
         </div>
       </section>
