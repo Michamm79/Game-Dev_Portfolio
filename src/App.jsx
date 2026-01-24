@@ -304,7 +304,7 @@ export default function GameDevPortfolio() {
         duration: dur,
         dx: -60 + Math.random() * 120,
         alpha: 0.45 + Math.random() * 0.45,
-        color: isWhite ? 'rgba(255,255,255,0.95)' : 'rgba(255,0,0,0.95)',
+        color: isWhite ? 'rgba(0,255,170,0.95)' : 'rgba(0,212,255,0.75)',
         glow,
       };
     });
@@ -319,16 +319,17 @@ export default function GameDevPortfolio() {
 
         :root {
           --void-black: #050508;
-          --deep-shadow: #0b0b12;
-          --midnight-blue: #111118;
-          --electric-cyan: #ff2b2b; /* primary red */
-          --plasma-blue: #b30000;   /* deep red */
-          --energy-glow: #ffffff;
-          --dark-purple: #0f0f14;
-          --accent-white: #ffffff;
+          --deep-shadow: #070b14;     /* darker blue-black */
+          --midnight-blue: #0b1224;   /* midnight navy */
+          --dark-purple: #081328;       /* subtle depth layer */
 
-          --code-bg: #0a0a0f;
-          --code-border: #2a0f0f;
+          --electric-cyan: #3ddcff;   /* primary accent (cyan) */
+          --plasma-blue: #2aa4ff;     /* secondary accent (bright cyan) */
+          --energy-glow: #eaf7ff;     /* soft glow white */
+          --accent-white: #eaf3ff;
+        
+          --code-bg: #070c18;
+          --code-border: #1a3b5c;
         }
 
         body {
@@ -357,10 +358,10 @@ export default function GameDevPortfolio() {
           position:absolute;
           inset:-25%;
           background:
-            radial-gradient(circle at 20% 40%, rgba(255,255,255,0.04) 0%, transparent 55%),
-            radial-gradient(circle at 70% 30%, rgba(255,0,0,0.05) 0%, transparent 60%),
-            radial-gradient(circle at 40% 70%, rgba(255,255,255,0.03) 0%, transparent 60%),
-            radial-gradient(circle at 80% 75%, rgba(179,0,0,0.04) 0%, transparent 65%);
+          radial-gradient(circle at 20% 40%, rgba(0,246,255,0.05) 0%, transparent 55%),
+          radial-gradient(circle at 70% 30%, rgba(0,212,255,0.06) 0%, transparent 60%),
+            radial-gradient(circle at 40% 70%, rgba(0,252,255,0.04) 0%, transparent 60%),
+            radial-gradient(circle at 80% 75%, rgba(0,255,170,0.04) 0%, transparent 65%);
           filter: blur(22px);
           opacity: 0.9;
           animation: smoke-drift 18s ease-in-out infinite alternate;
@@ -387,14 +388,14 @@ export default function GameDevPortfolio() {
           margin-bottom: 1rem;
 
           background: linear-gradient(135deg,
-            #ff0000 0%,
-            #ff0000 45%,
-            #ffffff 45%,
-            #ffffff 55%,
-            #ff0000 55%,
-            #ff0000 100%
+            #00e5ff 0%,
+            #00e5ff 45%,
+            #eaffff 45%,
+            #eaffff 55%,
+            #00e5ff 55%,
+            #00e5ff 100%
           );
-
+          
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -436,10 +437,10 @@ export default function GameDevPortfolio() {
           position:absolute;
           inset: calc(-1 * var(--glow, 14px));
           border-radius:999px;
-          background: radial-gradient(circle, rgba(255,0,0,0.24), rgba(255,0,0,0));
+          background: radial-gradient(circle, rgba(0,212,255,0.22), rgba(0,212,255,0));
           filter: blur(6px);
           opacity: 0.65;
-        }
+        }        
 
         @keyframes ember-rise{
           0%   { transform: translate3d(0, 24vh, 0) scale(1); opacity: 0; }
@@ -455,7 +456,7 @@ export default function GameDevPortfolio() {
 
         @keyframes bounce {
           0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-10px); }
+          50% { transform: translateY(-20px); }
         }
 
         /* NAV */
@@ -466,7 +467,7 @@ export default function GameDevPortfolio() {
           padding: 1.5rem 3rem;
           background: rgba(10, 10, 15, 0.8);
           backdrop-filter: blur(20px);
-          border-bottom: 1px solid rgba(255, 0, 0, 0.10);
+          border-bottom: 1px solid rgba(0, 212, 0, 0.10);
         }
 
         .nav-links{
@@ -516,7 +517,7 @@ export default function GameDevPortfolio() {
           font-family:'Orbitron', sans-serif;
           font-size: clamp(2.5rem, 5vw, 4rem);
           font-weight:700;
-          background: linear-gradient(180deg, #ffffff 0%, #f5f5f5 25%, #ff2b2b 100%);
+          background: linear-gradient(180deg, #ffffff 0%, #f5f5f5 25%, #3ddcff 100%);
           margin-bottom:4rem;
           text-align:center;
           text-transform:uppercase;
@@ -551,7 +552,7 @@ export default function GameDevPortfolio() {
 
         .project-card{
           background: linear-gradient(135deg, var(--deep-shadow) 0%, var(--midnight-blue) 100%);
-          border: 1px solid rgba(255,0,0,0.25);
+          border: 1px solid rgba(0,212,255,0.55);
           border-radius:12px;
           overflow:hidden;
           cursor:pointer;
@@ -562,7 +563,7 @@ export default function GameDevPortfolio() {
         .project-card:hover{
           transform: translateY(-10px);
           border-color: var(--electric-cyan);
-          box-shadow: 0 20px 60px rgba(255,0,0,0.25);
+          box-shadow: 0 20px 60px var(--plasma-blue);
         }
 
         .project-thumbnail{
@@ -598,8 +599,8 @@ export default function GameDevPortfolio() {
 
         .tag{
           padding:0.3rem 0.8rem;
-          background: rgba(255,0,0,0.10);
-          border: 1px solid rgba(255,0,0,0.25);
+          background: rgba(0,212,255,0.10);
+          border: 1px solid rgba(0,212,255,0.70);
           border-radius:20px;
           font-size:0.85rem;
           color: var(--energy-glow);
@@ -623,7 +624,7 @@ export default function GameDevPortfolio() {
 
         .code-card:hover{
           border-color: var(--electric-cyan);
-          box-shadow: 0 10px 40px rgba(255,0,0,0.18);
+          box-shadow: 0 10px 40px var(--plasma-blue)
         }
 
         .code-header{
@@ -651,7 +652,7 @@ export default function GameDevPortfolio() {
         .code-category{
           display:inline-block;
           padding:0.3rem 0.8rem;
-          background: rgba(255,0,0,0.10);
+          background: rgba(0,212,255,0.10);
           border: 1px solid rgba(255,0,0,0.25);
           border-radius:20px;
           font-size:0.8rem;
@@ -670,8 +671,8 @@ export default function GameDevPortfolio() {
 
         .code-btn{
           padding:0.5rem 1rem;
-          background: rgba(255,0,0,0.10);
-          border: 1px solid rgba(255,0,0,0.25);
+          background: rgba(0,25,255,0.30);
+          border: 1px solid var(--electric-cyan);
           border-radius:6px;
           color: var(--accent-white);
           font-family:'Rajdhani', sans-serif;
@@ -721,7 +722,7 @@ export default function GameDevPortfolio() {
           border-radius:12px;
           overflow:hidden;
           border: 2px solid var(--electric-cyan);
-          box-shadow: 0 0 40px rgba(255,0,0,0.2);
+          box-shadow: 0 0 40px rgba(0,212,255,0.2);
         }
 
         .gallery-image{
@@ -735,8 +736,8 @@ export default function GameDevPortfolio() {
           position:absolute;
           top:50%;
           transform: translateY(-50%);
-          background: rgba(255,0,0,0.16);
-          border: 1px solid var(--electric-cyan);
+          background:var(--midnight-blue);
+          border: 2px solid var(--electric-cyan);
           border-radius:50%;
           width:50px;
           height:50px;
@@ -751,7 +752,7 @@ export default function GameDevPortfolio() {
         .gallery-nav:hover{
           background: var(--electric-cyan);
           box-shadow: 0 0 20px var(--electric-cyan);
-        }
+        }s
 
         .gallery-nav.prev{ left:20px; }
         .gallery-nav.next{ right:20px; }
@@ -767,8 +768,8 @@ export default function GameDevPortfolio() {
           width:12px;
           height:12px;
           border-radius:50%;
-          background: rgba(255,0,0,0.25);
-          border: 1px solid rgba(255,0,0,0.5);
+          background: rgba(0,0,0,0.25);
+          border: 2px solid var(--electric-cyan);
           cursor:pointer;
           transition: all 0.3s;
         }
@@ -783,10 +784,9 @@ export default function GameDevPortfolio() {
           max-width:800px;
           margin:0 auto;
           background: linear-gradient(135deg, var(--deep-shadow) 0%, var(--dark-purple) 100%);
-          border: 2px solid var(--electric-cyan);
-          border-radius:16px;
+          border: 2px solid var(--electric-cyan);          border-radius:16px;
           padding:3rem;
-          box-shadow: 0 0 60px rgba(255,0,0,0.15);
+          box-shadow: 0 0 60px rgba(0,212,255,0.15);
         }
 
         .build-title{
@@ -841,7 +841,7 @@ export default function GameDevPortfolio() {
           position:absolute;
           top:1rem;
           right:1rem;
-          background: rgba(255,0,0,0.18);
+          background: rgba(0,212,255,0.18);
           border: 1px solid var(--electric-cyan);
           border-radius:50%;
           width:40px;
